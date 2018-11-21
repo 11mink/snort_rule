@@ -1,0 +1,40 @@
+alert tcp any any -> any 80 (msg:"gilgil.net"; content:"GET /"; content:"Host: gilgil.net"; sid:10001; rev:1;)
+
+alert tcp any any -> any 80 (msg:"www.gilgil.net"; content:"GET /"; content:"Host: www.gilgil.net"; sid:10002; rev:1;)
+
+alert tcp any any -> any 80 (msg:"test.gilgil.net"; content:"GET /"; content:"Host: test.gilgil.net"; sid:10003; rev:1;)
+
+alert tcp any any -> any 80 (msg:"snoopspy.com"; content:"GET /"; content:"Host: snoopspy.com"; sid:10004; rev:1;)
+
+
+alert tls any any -> 31.13.68.16 443 (msg : "facebook"; sid:10005;)
+alert tls 31.13.68.16 443 -> any any (msg : "facebook"; sid:10300;)
+#alert tls any any -> 31.13.95.36 443 (msg : "facebook2"; sid:10010;)
+
+alert tls any any -> 125.209.222.142 443 (msg : "naver"; sid:10006;)
+alert tls any any -> 125.209.254.157 443 (msg : "naver"; sid:10011;)
+alert tls any any -> 182.162.92.201 443 (msg : "naver"; sid:100012;)
+alert tls any any -> 125.209.254.186 443 (msg: "naver"; sid:10013;)
+alert tls any any -> 125.209.222.141 443 (msg: "naver"; sid:10014;)
+alert tls any any -> 125.209.218.79 443 (msg: "naver"; sid:10015;)
+alert tls any any -> 125.209.230.238 443 (msg: "naver"; sid:10016;)
+alert tls any any -> 182.162.92.146 443 (msg: "naver"; sid:10017;)
+alert tls any any -> 54.230.182.226 443 (msg: "naver"; sid:10019;)
+alert tls any any -> 210.89.160.88 443 (msg: "naver"; sid:10020;)
+alert tls any any -> 210.89.172.40 443 (msg: "naver"; sid:10021;)
+alert tls any any -> 210.89.172.9 443 (msg: "naver"; sid:10022;)
+alert tls any any -> 210.89.164.90 443 (msg: "naver"; sid:10023;)
+alert tls any any -> 182.162.92.145 443 (msg: "naver"; sid:10024;)
+
+alert tls any any -> 104.244.42.129 443 (msg: "twitter"; sid:10400;)
+alert tls any any -> 192.229.237.96 443 (msg: "twitter"; sid:10401;)
+alert tls any any -> 104.244.42.65 443 (msg: "twitter"; sid:10402;)
+alert tls any any -> 117.18.237.70 443 (msg: "twitter"; sid:10403;)
+
+
+
+
+
+
+
+
